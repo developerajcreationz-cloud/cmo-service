@@ -43,14 +43,12 @@ export type Project = {
   image: string;
 };
 
-// PLACEHOLDER projects
+// Real projects, taken from ajcreationz.co/portfolio
 export const projects: Project[] = [
-  { slug: "project-one", title: "Project One", kind: "Shopify Development & GTM", mat: "var(--sand)", image: "/img/work-1.svg" },
-  { slug: "project-two", title: "Project Two", kind: "WordPress Development", mat: "var(--sand)", image: "/img/work-2.svg" },
-  { slug: "project-three", title: "Project Three", kind: "Shopify Development & GTM", mat: "#79171f", image: "/img/work-3.svg" },
-  { slug: "project-four", title: "Project Four", kind: "WordPress Development", mat: "var(--sand)", image: "/img/work-4.svg" },
-  { slug: "project-five", title: "Project Five", kind: "Shopify Development & GTM", mat: "#231f20", image: "/img/work-5.svg" },
-  { slug: "project-six", title: "Project Six", kind: "WordPress Development", mat: "var(--sand)", image: "/img/work-6.svg" },
+  { slug: "call-time", title: "Call Time", kind: "Brand Identity & Marketing", mat: "#111", image: "/img/work-call-time.webp" },
+  { slug: "framily-adventures", title: "Framily Adventures", kind: "Branding & UI/UX Design", mat: "#14231a", image: "/img/work-framily-adventures.webp" },
+  { slug: "social-media-creatives", title: "Social Media Creatives", kind: "Marketing & Advertising Creatives", mat: "#111", image: "/img/work-social-media-creatives.webp" },
+  { slug: "nayasource", title: "NayaSource", kind: "Branding, UI/UX & Web Development", mat: "#231f20", image: "/img/work-nayasource.webp" },
 ];
 
 export type Review = {
@@ -206,8 +204,8 @@ export const fcmo = {
 export const pages = {
   work: {
     eyebrow: "Featured Projects",
-    title: "Six builds, one operator’s standard",
-    note: "Every project: Shopify and WordPress builds, go-to-market strategy, and growth marketing for founders and brands.",
+    title: "Four projects, one operator\u2019s standard",
+    note: "Brand identity, UI/UX, web development and marketing creatives for founders and brands.",
   },
   cases: {
     eyebrow: "Case studies",

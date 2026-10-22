@@ -50,7 +50,7 @@ export default function FractionalCmoPage() {
             <span className="fc__halo" aria-hidden="true" />
             <div className="fc__portrait" aria-hidden="true">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/img/fcmo-portrait.svg" alt="" width={1182} height={1576} data-fc-photo />
+              <img src="/img/ahmad-jan.webp" alt="" width={1000} height={1333} data-fc-photo />
             </div>
 
             <div className="fc__copy">

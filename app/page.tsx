@@ -41,7 +41,7 @@ export default function HomePage() {
             <div className="hero__halo hero__halo--2" data-halo-2 aria-hidden="true" />
             <div className="hero__stage">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className="hero__photo" data-hero-photo src="/img/hero.svg" alt={site.name} width={1024} height={1536} />
+              <img className="hero__photo" data-hero-photo src="/img/ahmad-jan.webp" alt={site.name} width={1000} height={1333} />
               <div className="hero__fade" aria-hidden="true" />
             </div>
           </div>

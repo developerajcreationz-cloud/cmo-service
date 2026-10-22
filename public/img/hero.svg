@@ -1,4 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1536" width="1024" height="1536">
-<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9a4ee"/><stop offset="1" stop-color="#7430f7"/></linearGradient></defs>
-<ellipse cx="512" cy="230.39999999999998" rx="133.12" ry="168.96" fill="url(#g)" fill-opacity=".85"/>
-<path d="M61.44 1536 L61.44 614.4000000000001 C61.44 460.79999999999995, 266.24 414.72, 512 414.72 C757.76 414.72, 962.56 460.79999999999995, 962.56 614.4000000000001 L962.56 1536 Z" fill="url(#g)" fill-opacity=".85"/></svg>
