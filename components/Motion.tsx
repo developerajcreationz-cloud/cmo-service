@@ -416,7 +416,7 @@ function playIntro(root: El, onReveal: () => void) {
 function hero(tl: gsap.core.Timeline, on: On, reduce: boolean) {
   const root = qs("[data-hero]");
   if (!root) return;
-  const photo = qs("[data-hero-photo]", root)!;
+  const photo = qs("[data-hero-photo]", root);
   const halo = qs("[data-halo]", root)!;
   const halo2 = qs("[data-halo-2]", root)!;
   const name = qs("[data-hero-name]", root)!;
@@ -427,36 +427,36 @@ function hero(tl: gsap.core.Timeline, on: On, reduce: boolean) {
 
   const split = new SplitText(name, { type: "lines,chars", linesClass: "line", charsClass: "char", mask: "lines" });
   gsap.set([halo, halo2], { scale: 0.55, opacity: 0 });
-  gsap.set(photo, { yPercent: 8, scale: 1.05, opacity: 0 });
+  if (photo) gsap.set(photo, { yPercent: 8, scale: 1.05, opacity: 0 });
   gsap.set(split.chars, { yPercent: 118 });
   gsap.set([tag, cue], { opacity: 0, y: 14 });
   gsap.set(lede.children, { opacity: 0, y: 22 });
 
   tl.to(halo, { scale: 1, opacity: 1, duration: 1.8, ease: "out" }, 0)
     .to(halo2, { scale: 1, opacity: 1, duration: 2.2, ease: "out" }, 0.1)
-    .to(photo, { yPercent: 0, scale: 1, opacity: 1, duration: 1.6 }, 0.05)
     .to(split.chars, { yPercent: 0, duration: 1, stagger: 0.022 }, 0.35)
     .to(tag, { opacity: 1, y: 0, duration: 0.7 }, 0.85)
     .to(lede.children, { opacity: 1, y: 0, duration: 0.8, stagger: 0.12 }, 0.7)
     .to(cue, { opacity: 1, y: 0, duration: 0.6 }, 1.1);
+  if (photo) tl.to(photo, { yPercent: 0, scale: 1, opacity: 1, duration: 1.6 }, 0.05);
 
   // Scroll parallax
-  gsap
+  const parallax = gsap
     .timeline({ scrollTrigger: { trigger: root, start: "top top", end: "bottom top", scrub: 0.6 } })
-    .to(photo, { yPercent: 12, scale: 1.08, ease: "none" }, 0)
     .to(halo, { yPercent: -26, scale: 1.25, ease: "none" }, 0)
     .to(halo2, { yPercent: -40, ease: "none" }, 0)
     .to(name, { yPercent: -34, ease: "none" }, 0)
     .to(tag, { yPercent: -34, opacity: 0.2, ease: "none" }, 0)
     .to(cue, { opacity: 0, duration: 0.2 }, 0);
+  if (photo) parallax.to(photo, { yPercent: 12, scale: 1.08, ease: "none" }, 0);
 
   // Pointer parallax + idle breathing
   if (canHover()) {
-    const px = gsap.quickTo(photo, "xPercent", { duration: 1.2, ease: "power2" });
+    const px = photo ? gsap.quickTo(photo, "xPercent", { duration: 1.2, ease: "power2" }) : null;
     const hx = gsap.quickTo(halo, "xPercent", { duration: 1.6, ease: "power2" });
     on(window, "pointermove", (e) => {
       const r = (e as PointerEvent).clientX / window.innerWidth - 0.5;
-      px(r * -1.6);
+      px?.(r * -1.6);
       hx(r * 4);
     });
   }

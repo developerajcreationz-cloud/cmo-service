@@ -136,7 +136,6 @@ export const fcmo = {
   title: "Senior-level marketing leadership without the full-time executive overhead",
   paras: [
     "I partner directly with founders to build, manage, and improve the systems responsible for generating growth. That means connecting positioning, paid acquisition, content, conversion strategy, technology, and analytics into one coordinated growth function, not handing you another strategy deck and leaving your team to execute it.",
-    "As the founder of Ajcreationz, I help startups, ecommerce companies, service businesses, and established organizations turn marketing challenges into structured growth plans. My background combines performance marketing with conversion-focused web development, giving me the ability to evaluate the entire customer journey, from the first impression through the final conversion.",
   ],
   emphasis:
     "I work best with founders who have built something valuable but need an experienced partner to bring direction, accountability, and execution to their marketing.",

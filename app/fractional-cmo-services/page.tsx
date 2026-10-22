@@ -48,10 +48,6 @@ export default function FractionalCmoPage() {
 
           <header className="fc__hero">
             <span className="fc__halo" aria-hidden="true" />
-            <div className="fc__portrait" aria-hidden="true">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/img/ahmad-jan.webp" alt="" width={1000} height={1333} data-fc-photo />
-            </div>
 
             <div className="fc__copy">
               <p className="fc__eyebrow" data-split-words>{fcmo.eyebrow}</p>
